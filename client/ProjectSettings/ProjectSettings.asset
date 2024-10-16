@@ -163,6 +163,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.nes.unityxwebbrowser
     Standalone: com.DefaultCompany.2DProject
+    iPhone: com.nes.unityxwebbrowser
   buildNumber:
     Standalone: 0
     VisionOS: 0

@@ -1,10 +1,12 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class LoginHandler : MonoBehaviour
 {
     public Button loginButton;
+    public TMP_Text textCode;
     public string loginUrl = "http://localhost:1939/auth/authorize";
     public string clientId = "dummy_client_id"; // Replace with your actual client ID
     public string redirectUri = "unityxwebbrowser://callback"; // Your custom URL scheme
@@ -34,6 +36,7 @@ public class LoginHandler : MonoBehaviour
         // Print the received data
         Debug.Log($"___________Received Code: {code}");
         Debug.Log($"___________Received State: {state}");
+        textCode.text = code;
     }
 }
 

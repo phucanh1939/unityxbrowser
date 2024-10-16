@@ -1,6 +1,7 @@
 package com.nes.unityxwebbrowser;
 
 import com.unity3d.player.UnityPlayerActivity;
+import com.unity3d.player.UnityPlayer;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -27,7 +28,7 @@ public class CustomActivity extends UnityPlayerActivity {
         if (data != null) {
             String url = data.toString();
             // Call the Unity method to handle the redirect
-            UnityPlayer.UnityPlayerActivity.UnityPlayer.UnitySendMessage("LoginHandler", "HandleRedirect", url);
+            UnityPlayer.UnitySendMessage("LoginHandler", "HandleRedirect", url);
         }
     }
 }
